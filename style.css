@@ -1,0 +1,15 @@
+.item{
+    background-color: rgb(172, 212, 240);
+    padding: 10px ;
+    display: flex;
+    
+}
+
+.newInput{
+    margin-right: 10px;
+    width: 190px;
+
+}
+.newAdd{
+    margin-right: 10px;
+}
