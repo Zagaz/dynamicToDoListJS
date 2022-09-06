@@ -10,6 +10,10 @@ if (items != 0) {
 function add() {
    
     changeVisibility('noItem' , 'hidden')
+    changeVisibility('controlBT' , 'visible')
+
+  
+    
 
     //Each div has its own id e.g: id_4, id_5, etc.
     let i = divCount()
@@ -62,8 +66,9 @@ function deleteDiv(i) {
     items--;
     if (items == 0) {
 
-        changeVisibility('noItem' , 'visible')
-        changeVisibility('finishBT' , 'hidden')
+        // changeVisibility('noItem' , 'visible')
+        // changeVisibility('finishBT' , 'hidden')
+         changeVisibility('controlBT' , 'hidden');
 
     }
     finishBT()
@@ -101,6 +106,18 @@ function finishBT() {
 }
 
 
+
+function sendAll() {
+    
+    console.log ( 'sendAll ');
+}
+
+function clearAll() {
+    
+    console.log ( 'clearAll ');
+}
+
+
 function startItems() {
     items = 0;
 
@@ -110,3 +127,15 @@ function changeVisibility(id,status){
     document.getElementById(id).style.visibility = status;
 
 }
+
+function classAdder(id,addclass){
+    document.getElementById(id).add("." + addclass);
+
+}
+
+function classRemover(id,removeclass){
+    document.getElementById(id).add("." + removeclass);
+
+}
+
+

@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body onload=" startItems () ; noItemVisibility('visible')">
+  <body onload=" startItems () ;
+             changeVisibility('controlBT' , 'hidden');
+            //  classAdder('sendBT','allClear');
+            //  classAdder('clearBT','allClear');
+           //  changeVisibility('sendBT' , 'hidden') ; 
+            // changeVisibility ('clearBT' , 'hidden')">
     <div class="bg-secondary p-2 pb-2">
     <h3 class="text-white" >
         Dynamic <spam class= 'text-white-50'>TO DO</spam>  list
@@ -24,7 +29,9 @@
         </div>
         
         <div>
-          <div id="finishBT">
+          <div id="controlBT" class="mt-3">
+            <button id = "sendBT" type="button" onclick="sendAll()" class="btn btn-success ms-3 me-2 " visibility = "hidden">Success</button>
+            <button id = "clearBT" type="button" onclick="clearAll()" class="btn btn-warning" visibility = "hidden">Warning</button>
         </div>
 
      </div>
