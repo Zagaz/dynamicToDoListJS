@@ -1,6 +1,6 @@
 var items = 0;
 if (items != 0) {
-    noItemVisibility('hidden')
+    changeVisibility('noItem' , 'hidden')
 } else {
     console.log("-" + items)
 }
@@ -8,7 +8,8 @@ if (items != 0) {
 
 
 function add() {
-    noItemVisibility('hidden')
+   
+    changeVisibility('noItem' , 'hidden')
 
     //Each div has its own id e.g: id_4, id_5, etc.
     let i = divCount()
@@ -46,7 +47,7 @@ function add() {
     newDiv.appendChild(newBT)
     items++;
     finishBT()
-    finishBTvisibility('visible')
+    changeVisibility('finishBT' , 'visible')
 
 
 }
@@ -60,8 +61,9 @@ function deleteDiv(i) {
     toBeDeleted.remove()
     items--;
     if (items == 0) {
-        noItemVisibility('visible')
-        finishBTvisibility('hidden')
+
+        changeVisibility('noItem' , 'visible')
+        changeVisibility('finishBT' , 'hidden')
 
     }
     finishBT()
@@ -98,22 +100,13 @@ function finishBT() {
 
 }
 
-function noItemVisibility(status) {
-
-
-    document.getElementById("noItem").style.visibility = status;
-
-}
-
-function finishBTvisibility(status) {
-
-
-    document.getElementById("finishBT").style.visibility = status;
-
-}
-
 
 function startItems() {
     items = 0;
+
+}
+
+function changeVisibility(id,status){
+    document.getElementById(id).style.visibility = status;
 
 }
